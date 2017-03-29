@@ -4,18 +4,15 @@ import com.roroterminal.lksys.params.BaseVO;
 import com.roroterminal.lksys.params.CarVO;
 import com.roroterminal.lksys.params.YardVO;
 import com.roroterminal.lksys.service.RoroFloorService;
-import org.apache.commons.collections.map.HashedMap;
 import org.apache.commons.collections.map.LinkedMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
-import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -54,6 +51,7 @@ public class RoroFloorController extends BaseController{
         carVO.setCarName("sonata");
         carVO.setCarInfo("sonata CarInfo");
         map.put("data",carVO);
+        //git test
         return map;
     }
 }
