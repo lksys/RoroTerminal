@@ -23,35 +23,19 @@ import java.util.Map;
 public class RoroFloorController extends BaseController{
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
-
     @Autowired
     private RoroFloorService roroFloorService;
-    @RequestMapping("/object_floor_Info")
-    public BaseVO getRoroFloorInfo(@Valid YardVO params, BindingResult result){
+    @RequestMapping("/Object_Floor_Info")
+    public Map<String,Object> getRoroFloorInfo(@Valid YardVO params, BindingResult result){
         if (result.hasErrors()) {
             setValidationFailed();
         }
+        Map<String,Object> map = new LinkedMap();
+        map.put("state",setSuccess("YardInfo"));
 
         YardVO yardVO = new YardVO();
-        yardVO.setResult(setSuccess());
         yardVO = roroFloorService.getRoroFloorInfo();
-        return yardVO;
-    }
-
-    @RequestMapping("/apitest")
-    public Map<String,Object> apiTest(){
-
-        Map<String,Object> map = new LinkedMap();
-
-        map.put("state",setSuccess());
-
-        CarVO carVO = new CarVO();
-        carVO.setCarId(1);
-        carVO.setCarType("small");
-        carVO.setCarName("sonata");
-        carVO.setCarInfo("sonata CarInfo");
-        map.put("data",carVO);
-        //git test
+        map.put("data",yardVO);
         return map;
     }
 }

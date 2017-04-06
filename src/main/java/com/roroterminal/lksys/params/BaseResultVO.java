@@ -22,10 +22,10 @@ public class BaseResultVO extends BaseVO{
 		this.result_msg = new ResultVO(JsonResultCode.JC_SUCCESS, JsonResultCode.JM_SUCCESS);
 	}
 	
-	public BaseResultVO(String code, String msg){
+	/*public BaseResultVO(String code, String msg){
 		super(JsonResultCode.JC_SUCCESS, JsonResultCode.JM_SUCCESS);
 		this.result_msg = new ResultVO(code, msg); 
-	}
+	}*/
 	
 	public void setResult(BaseResultVO resultVO) {
 		super.setCode(resultVO.getCode());

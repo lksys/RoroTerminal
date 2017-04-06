@@ -6,7 +6,7 @@ package com.roroterminal.lksys.params;
 public class YardVO extends BaseVO{
     private int YardId;
     private String YardName;
-    private String YardInfo;
+    private String FBXInfo;
 
     public int getYardId() {
         return YardId;
@@ -24,11 +24,12 @@ public class YardVO extends BaseVO{
         YardName = yardName;
     }
 
-    public String getYardInfo() {
-        return YardInfo;
+    public String getFBXInfo() {
+        return FBXInfo;
     }
 
-    public void setYardInfo(String yardInfo) {
-        YardInfo = yardInfo;
+    public void setFBXInfo(String FBXInfo) {
+        this.FBXInfo = FBXInfo;
     }
+
 }

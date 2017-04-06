@@ -9,8 +9,8 @@ import com.roroterminal.lksys.params.BaseVO;
  * Created by kimha on 2017-03-27.
  */
 public class BaseController {
-    public BaseVO setSuccess() {
-        return new BaseVO(JsonResultCode.JC_SUCCESS, JsonResultCode.JM_SUCCESS);
+    public BaseVO setSuccess(String rsType) {
+        return new BaseVO(JsonResultCode.JC_SUCCESS, JsonResultCode.JM_SUCCESS,rsType);
     }
 
     public BaseVO setValidationFailed() {
@@ -23,16 +23,16 @@ public class BaseController {
      * @param msg
      * @return
      */
-    public BaseResultVO setResultCode(String code, String msg){
+    /*public BaseResultVO setResultCode(String code, String msg){
         return new BaseResultVO(code, msg);
-    }
+    }*/
 
     /**
      * result_msg에 message 세팅 (code : 200)
      * @param msg
      * @return
      */
-    public BaseResultVO setSuccess(String msg) {
+    /*public BaseResultVO setSuccess(String msg) {
         return new BaseResultVO(JsonResultCode.JC_SUCCESS, msg);
-    }
+    }*/
 }

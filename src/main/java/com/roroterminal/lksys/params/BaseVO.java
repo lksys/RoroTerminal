@@ -9,12 +9,14 @@ package com.roroterminal.lksys.params;
 public class BaseVO {
     private String code;
     private String msg;
+    private String rsType;
 
     public BaseVO() {}
 
-    public BaseVO(String code, String msg) {
+    public BaseVO(String code, String msg,String rsType) {
         this.code = code;
         this.msg = msg;
+        this.rsType = rsType;
     }
 
     public String getCode() {
@@ -32,9 +34,16 @@ public class BaseVO {
     public void setMsg(String msg) {
         this.msg = msg;
     }
+    public String getRsType() {
+        return rsType;
+    }
 
+    public void setRsType(String rsType) {
+        this.rsType = rsType;
+    }
     public void setResult(BaseVO result){
         this.code = result.getCode();
         this.msg = result.getMsg();
+        this.rsType = result.getRsType();
     }
 }
